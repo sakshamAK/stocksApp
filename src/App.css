@@ -1,38 +1,274 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+body {
+  font-family: "Roboto", sans-serif;
+  background: #eef2ff;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body::-webkit-scrollbar {
+  display: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+header {
+  background: rgb(55, 48, 163);
+  padding: 17px 80px;
+  width: 100vw;
+  box-sizing: border-box;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: space-between;
+}
+
+header a,
+header span {
   color: white;
+  font-size: 18px;
+  margin-top: 5px;
 }
 
-.App-link {
-  color: #61dafb;
+header div a img {
+  height: 25px;
+  margin-left: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.tooltip,
+.tooltip2 {
+  font-size: 15px;
+  position: absolute;
+  color: black;
+  padding: 5px;
+  display: none;
+  top: 50px;
+  right: 195px;
+  border-radius: 5px;
+  background: #a5b4fc;
+}
+
+div a:nth-child(2) .tooltip {
+  right: 150px;
+}
+
+div a:nth-child(3) .tooltip {
+  right: 100px;
+}
+
+div a:nth-child(4) .tooltip {
+  right: 50px;
+}
+
+header div a:nth-child(1):hover .tooltip,
+header div a:nth-child(2):hover .tooltip,
+header div a:nth-child(3):hover .tooltip,
+header div a:nth-child(4):hover .tooltip {
+  display: block;
+}
+
+header div a img[src="./images/linkedIn.svg"],
+header div a img[src="./images/medium.svg"] {
+  height: 28px;
+}
+
+.container {
+  margin: 40px 140px;
+  display: grid;
+  grid-template-columns: auto auto;
+  background: rgba(238, 242, 255, 0.5);
+  padding: 40px;
+}
+.container div h1 {
+  font-size: 40px;
+  margin: 0.67em 0 1.5em 0;
+}
+
+.container div h3 {
+  margin: 1.5em 0 0 0;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+input {
+  font-size: 18px;
+  padding: 5px 10px;
+  border: 2px solid black;
+  border-radius: 5px;
+  width: 400px;
+}
+
+.container img {
+  margin: 20px -150px 0 0;
+  height: 400px;
+}
+
+@media screen and (max-width: 1360px) {
+  .container img {
+    margin: 80px -150px 0 0;
+    height: 350px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .container {
+    margin: 40px auto;
+    width: 80vw;
+  }
+  .container div h1 {
+    font-size: 35px;
+    margin: 0.67em 0 1.5em 0;
+  }
+  header {
+    padding: 15px 80px;
+  }
+}
+
+@media screen and (max-width: 1060px) {
+  header {
+    padding: 15px 40px;
+  }
+  .container img {
+    height: 320px;
+    margin: 50px 0 0 0;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    margin-top: 50px;
+    width: 80vh;
+    height: 90vh;
+  }
+  .container div h1 {
+    font-size: 32px;
+    margin: 0.67em 0 1.5em 0;
+  }
+  .container form {
+    text-align: center;
+  }
+  .container form h3 {
+    margin-left: -245px;
+  }
+  .container form h3:nth-of-type(3) {
+    margin-left: -270px;
+  }
+  input {
+    width: 350px;
+  }
+}
+
+@media screen and (max-width: 755px) {
+  .container {
+    width: 60vw;
+    padding-top: 70px;
+  }
+}
+
+@media screen and (max-width: 675px) {
+  .container img {
+    height: 280px;
+  }
+  header {
+    padding: 10px 40px;
+  }
+  header a,
+  header span {
+    font-size: 16px;
+  }
+  header div a img {
+    height: 22px;
+    margin-left: 15px;
+  }
+  header div a img[src="./images/linkedIn.svg"],
+  header div a img[src="./images/medium.svg"] {
+    height: 24px;
+  }
+}
+
+@media screen and (max-width: 570px) {
+  .container img {
+    height: 250px;
+  }
+}
+
+@media screen and (max-width: 513px) {
+  .container img {
+    height: 250px;
+  }
+  input {
+    width: 300px;
+  }
+  .container form h3 {
+    margin-left: -200px;
+  }
+  .container form h3:nth-of-type(3) {
+    margin-left: -222px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .container img {
+    height: 220px;
+  }
+}
+
+@media screen and (max-width: 435px) {
+  .container {
+    margin-top: 20px;
+    padding-top: 20px;
+  }
+  .container form h1 {
+    margin-top: 0;
+  }
+
+  header {
+    padding: 10px 20px;
+  }
+
+  header a, header span {
+    margin-top: 0;
+  }
+
+  header a:nth-of-type(2),
+  header a:nth-of-type(3),
+  header a:nth-of-type(4) {
+    display: none;
+  }
+  .container img {
+    height: 200px;
+  }
+  input {
+    width: 250px;
+  }
+  .container form h3 {
+    margin-left: -150px;
+  }
+  .container form h3:nth-of-type(3) {
+    margin-left: -172px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .container {
+    margin-top: 0;
+    padding-top: 0;
+  }
+  .container img {
+    height: 150px;
+  }
+  .container form h1 {
+    font-size: 30px;
+  }
+  input {
+    width: 220px;
+  }
+  .container form h3 {
+    margin-left: -120px;
+  }
+  .container form h3:nth-of-type(3) {
+    margin-left: -142px;
+  }
+  .container form h2 {
+    font-size: 20px;
   }
 }
