@@ -30,38 +30,6 @@ header div a img {
   margin-left: 20px;
 }
 
-.tooltip,
-.tooltip2 {
-  font-size: 15px;
-  position: absolute;
-  color: black;
-  padding: 5px;
-  display: none;
-  top: 50px;
-  right: 195px;
-  border-radius: 5px;
-  background: #a5b4fc;
-}
-
-div a:nth-child(2) .tooltip {
-  right: 150px;
-}
-
-div a:nth-child(3) .tooltip {
-  right: 100px;
-}
-
-div a:nth-child(4) .tooltip {
-  right: 50px;
-}
-
-header div a:nth-child(1):hover .tooltip,
-header div a:nth-child(2):hover .tooltip,
-header div a:nth-child(3):hover .tooltip,
-header div a:nth-child(4):hover .tooltip {
-  display: block;
-}
-
 header div a img[src="./images/linkedIn.svg"],
 header div a img[src="./images/medium.svg"] {
   height: 28px;

@@ -62,10 +62,10 @@ function App() {
       <header>
           <span>Created By <a href = "https://sakshamak.netlify.app/">Saksham</a></span>
         <div>
-          <a href = "https://github.com/sakshamAK"><div className = "tooltip">Github</div><img src = "\images\github.svg" alt = "github"/></a>
-          <a href = "https://twitter.com/saksham_ka"><div className = "tooltip">Twitter</div><img src = "./images/twitter.svg" alt = "twitter"/></a>
-          <a href = "https://www.linkedin.com/in/saksham-ak-55b9131b3/"><div className = "tooltip">LinkedIn</div><img src = "./images/linkedIn.svg" alt = "linkedIn"/></a>
-          <a href = "https://thefearofblogs.medium.com/"><div className = "tooltip">Medium</div><img src = "./images/medium.svg" alt = "medium"/></a>
+          <a href = "https://github.com/sakshamAK"><img src = "\images\github.svg" alt = "github"/></a>
+          <a href = "https://twitter.com/saksham_ka"><img src = "./images/twitter.svg" alt = "twitter"/></a>
+          <a href = "https://www.linkedin.com/in/saksham-ak-55b9131b3/"><img src = "./images/linkedIn.svg" alt = "linkedIn"/></a>
+          <a href = "https://thefearofblogs.medium.com/"><img src = "./images/medium.svg" alt = "medium"/></a>
         </div>
       </header>
       <div className = "container">
@@ -73,11 +73,11 @@ function App() {
           <form onSubmit = { (e) => onSubmit(e) }>
             <h1 className = "head">Check Profit/Loss on your Stocks</h1>
             <h3>Purchase Price</h3>
-            <input type = "number" className = "numFields" onChange = { (e) => onchange(e.target.value, 'Myprice') }/>
+            <input type = "number" id = "myPrice" className = "numFields" onChange = { (e) => onchange(e.target.value, 'Myprice') }/>
             <h3>Stocks Amount</h3>
-            <input type = "number" className = "numFields" onChange = { (e) => onchange(e.target.value, 'number') }/>
+            <input type = "number" id = "stockNumber" className = "numFields" onChange = { (e) => onchange(e.target.value, 'number') }/>
             <h3>Current Rate</h3>
-            <input type = "number" className = "numFields" onChange = { (e) => onchange(e.target.value, 'CurrVal') }/>
+            <input type = "number" id = "currentValue" className = "numFields" onChange = { (e) => onchange(e.target.value, 'CurrVal') }/>
             <input type = "submit" style = {{display: 'none'}} onSubmit = { (e) => onSubmit(e) }/>
             <h2>{res}</h2>
           </form>
