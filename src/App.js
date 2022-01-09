@@ -29,31 +29,19 @@ function App() {
       val = parseInt(myVal);
       number = parseInt(Num);
       curVal = parseInt(currVal);
-    } else {
-      setRes("Please enter values greater than 0");
-    }
+    } else setRes("Please enter values greater than 0");
     if(curVal > val) {
       Pnum = (curVal - val) * number;
       Pper = (((curVal - val) * 100) / curVal).toFixed(2);
       setRes(`Yay! Your total profit is ₹${Pnum}. You gained profit of ${Pper}%`);
       setImgSrc("/images/rise.svg");
-      if(Pper > 50) {
-        setBgSrc(`url("https://media.giphy.com/media/KiGMzfSIrNf0s/giphy.gif"`);
-      } else {
-        setBgSrc(`#EEF2FF`);
-      }
+      (Pper > 50) ? setBgSrc(`url("https://media.giphy.com/media/KiGMzfSIrNf0s/giphy.gif"`) : setBgSrc(`#EEF2FF`);
     } else {
       Lnum = (val - curVal) * number;
       Lper = (((val - curVal) * 100) / val).toFixed(2);
       setRes(`You lost ₹${Lnum}. Your loss is about ${Lper}%`);
-      setImgSrc("/images/drops.svg")
-      if(Lper > 50) {
-        //background
-        setBgSrc(`url("https://media.giphy.com/media/lSzQjkthGS1gc/giphy.gif"`);
-      }
-      else {
-        setBgSrc(`#EEF2FF`);
-      }
+      setImgSrc("/images/drops.svg");
+      (Lper > 50) ? setBgSrc(`url("https://media.giphy.com/media/lSzQjkthGS1gc/giphy.gif"`) : setBgSrc(`#EEF2FF`);
     }
   }
 
